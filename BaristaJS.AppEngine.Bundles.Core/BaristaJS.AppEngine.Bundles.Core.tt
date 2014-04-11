@@ -1,0 +1,16 @@
+<#@ output extension=".nuspec" #>
+<#@ include file="Version.tt" #>
+
+<package>
+  <metadata>
+    <id>BaristaJS.AppEngine.Bundles.Core</id>
+    <version><#= version #></version>
+    <title>Core BaristaJS Bundle</title>
+    <authors>BaristaJS</authors>
+    <owners>BaristaJS</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Contains the core Barista Bundles: Barista, Http and so forth.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014 SixConcepts, LLC</copyright>
+  </metadata>
+</package>
