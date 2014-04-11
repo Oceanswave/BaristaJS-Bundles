@@ -1,6 +1,4 @@
-﻿
-
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("BaristaJS.AppEngine.Bundles.Core")]
