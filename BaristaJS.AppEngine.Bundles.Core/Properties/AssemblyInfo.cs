@@ -1,5 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
+using BaristaJS.AppEngine;
+using BaristaJS.AppEngine.Bundles;
 
 [assembly: AssemblyTitle("BaristaJS.AppEngine.Bundles.Core")]
 [assembly: AssemblyProduct("BaristaJS")]
@@ -9,3 +11,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 [assembly: AssemblyVersion("0.0.0.4")]
 [assembly: AssemblyFileVersion("0.0.0.4")]
+[assembly: BaristaJSBundle(typeof(BaristaBundle))]
