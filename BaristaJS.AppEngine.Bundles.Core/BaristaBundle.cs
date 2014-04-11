@@ -11,27 +11,11 @@
             m_instance = new BaristaInstance(bundleManager, packageSource, env);
         }
 
-        //TODO: Um, get rid of these properties, somehow!!! (Injection, something? I'm too tired to think.)
-        public string Description
+        public IBundleMetadata Metadata
         {
-            get { return "It's barista!!"; }
+            get;
+            set;
         }
-
-        public string Id
-        {
-            get { return "Barista"; }
-        }
-
-        public string Title
-        {
-            get { return "Barista Core"; }
-        }
-
-        public SemanticVersion Version
-        {
-            get { return SemanticVersion.Parse("1.0.0.0"); }
-        }
-
 
         public object InstallBundle(IScriptEngine engine)
         {
