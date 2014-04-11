@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaristaJS.AppEngine.Bundles.Core", "BaristaJS.AppEngine.Bundles.Core\BaristaJS.AppEngine.Bundles.Core.csproj", "{65CC3F87-35D0-4EDC-A0CD-53913A84AC40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2FA8C558-8756-4254-828F-70939CB9A4DE}"
@@ -11,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2FA8C5
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaristaJS.AppEngine.Bundles.Npm", "BaristaJS.AppEngine.Bundles.Npm\BaristaJS.AppEngine.Bundles.Npm.csproj", "{E2A0C6BE-A5C4-45A7-AC29-D5577A014D9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaristaJS.AppEngine.Bundles.Lodash", "BaristaJS.AppEngine.Bundles.Lodash\BaristaJS.AppEngine.Bundles.Lodash.csproj", "{5F27DCF3-39BB-49D3-854D-8BA50CFA44B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +24,14 @@ Global
 		{65CC3F87-35D0-4EDC-A0CD-53913A84AC40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65CC3F87-35D0-4EDC-A0CD-53913A84AC40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65CC3F87-35D0-4EDC-A0CD-53913A84AC40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A0C6BE-A5C4-45A7-AC29-D5577A014D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A0C6BE-A5C4-45A7-AC29-D5577A014D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A0C6BE-A5C4-45A7-AC29-D5577A014D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A0C6BE-A5C4-45A7-AC29-D5577A014D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F27DCF3-39BB-49D3-854D-8BA50CFA44B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F27DCF3-39BB-49D3-854D-8BA50CFA44B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F27DCF3-39BB-49D3-854D-8BA50CFA44B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F27DCF3-39BB-49D3-854D-8BA50CFA44B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
