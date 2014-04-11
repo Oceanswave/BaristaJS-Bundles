@@ -1,6 +1,6 @@
 <package>
   <metadata>
-    <id>Lodash</id>
+    <id>BaristaJS.AppEngine.Bundles.Lodash</id>
     <version>2.4.1.0</version>
     <title>Lo-Dash</title>
     <authors>BaristaJS</authors>
