@@ -53,7 +53,7 @@
         [ScriptMember("require")]
         public object Require(string packageId, string version = null)
         {
-            var bundle = BundleManager.GetBundle(Environment, PackageSource, packageId, version);
+            var bundle = BundleManager.GetBundle<IBundle>(Environment, PackageSource, packageId, version);
 
             return bundle;
         }
