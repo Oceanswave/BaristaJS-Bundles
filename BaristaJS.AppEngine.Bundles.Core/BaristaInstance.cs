@@ -57,8 +57,7 @@
         public object Require(string packageId, string version = null)
         {
             var bundle = BundleManager.GetBundle<IBundle>(Environment, PackageSource, packageId, version);
-
-            return bundle;
+            return bundle.InstallBundle(m_engine);
         }
 
         [NoScriptAccess]
