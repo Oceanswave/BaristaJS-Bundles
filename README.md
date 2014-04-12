@@ -1,11 +1,11 @@
-BaristaJS.AppEngine.Bundles.Core
+BaristaJS AppEngine Bundles
 =================
 
-Contains BaristaJS Core Bundle
+Contains BaristaJS Bundles
 
 BaristaJS Bundles are individual units of functionality. These bundles may be wrappers of existing functionality, a large library or a simple program.
 
-Bundles are published through the BaristaJS NuGet repository located at https://www.myget.org/feed/Details/baristajs. But you are free to fork BaristaJS and create your own BaristaJS server.
+The bundles contained in this repository are published through the BaristaJS NuGet repository located at https://www.myget.org/feed/Details/baristajs. But you are free to fork BaristaJS and create your own BaristaJS server.
 
 
 In BaristaJS, include a bundle by specifying require("--BundleName--")
