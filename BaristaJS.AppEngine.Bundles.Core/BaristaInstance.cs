@@ -6,9 +6,10 @@
 
     public class BaristaInstance : IScriptableObject
     {
+        private readonly IBundleMetadata m_baristaInstanceMetadata;
         private IScriptEngine m_engine;
 
-        public BaristaInstance(IBundleManager bundleManager, string packageSource, IDictionary<string, object> env)
+        public BaristaInstance(IBundleManager bundleManager, string packageSource, IDictionary<string, object> env, IBundleMetadata metadata)
         {
             if (bundleManager == null)
                 throw new ArgumentNullException("bundleManager");
@@ -19,9 +20,13 @@
             if (env == null)
                 throw new ArgumentNullException("env");
 
+            if (metadata == null)
+                throw new ArgumentNullException("metadata");
+
             BundleManager = bundleManager;
             PackageSource = packageSource;
             Environment = env;
+            m_baristaInstanceMetadata = metadata;
         }
 
         #region Properties
@@ -44,6 +49,12 @@
         {
             get;
             set;
+        }
+
+        [ScriptMember(Name = "version")]
+        public string Version
+        {
+            get { return m_baristaInstanceMetadata.Version.ToString(); }
         }
         #endregion
 

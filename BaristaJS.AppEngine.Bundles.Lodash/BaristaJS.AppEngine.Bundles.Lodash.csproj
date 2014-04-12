@@ -34,7 +34,7 @@
   <ItemGroup>
     <Reference Include="BaristaJS.AppEngine.Core, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\BaristaJS.AppEngine.Core.1.0.0.5\lib\net45\BaristaJS.AppEngine.Core.dll</HintPath>
+      <HintPath>..\packages\BaristaJS.AppEngine.Core.1.0.0.6\lib\net45\BaristaJS.AppEngine.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
