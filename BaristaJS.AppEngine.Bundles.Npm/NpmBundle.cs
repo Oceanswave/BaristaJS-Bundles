@@ -1,9 +1,5 @@
 ﻿namespace BaristaJS.AppEngine.Bundles.Npm
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-
     public class NpmBundle : IBundle
     {
         private readonly NpmInstance m_instance;
@@ -14,9 +10,9 @@
             set;
         }
 
-        public NpmBundle(string workingDirectory, IEnumerable<string> contentFiles)
+        public NpmBundle()
         {
-            m_instance = new NpmInstance(workingDirectory, contentFiles.FirstOrDefault(cf => cf.EndsWith("node.exe", StringComparison.OrdinalIgnoreCase)));
+            m_instance = new NpmInstance();
         }
 
         public object InstallBundle(IScriptEngine engine)

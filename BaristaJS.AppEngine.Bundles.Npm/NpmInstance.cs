@@ -1,27 +1,16 @@
 ﻿namespace BaristaJS.AppEngine.Bundles.Npm
 {
-    using BaristaJS.Appengine.Bundles.Npm.NodeNpm;
+    using System;
 
     public class NpmInstance : IScriptableObject
     {
-        private readonly NpmApi m_npmApi;
         private IScriptEngine m_engine;
 
-        public NpmInstance(string workingDirectory, string nodeInstallPath)
+        [ScriptMember(Name = "search")]
+        public object Search(string name)
         {
-            m_npmApi = new NpmApi(workingDirectory);
-            if (m_npmApi == null)
-            {
-                throw new ScriptEngineException("Failed to create NpmApi");
-            }
-
-            m_npmApi.NpmClient.InstallPath = nodeInstallPath;
-        }
-
-        [ScriptMember(Name = "version")]
-        public string Version
-        {
-            get { return m_npmApi.GetInstalledVersion(); }
+            //TODO: Scrape the npmjs.org website and get results.
+            throw new NotImplementedException();
         }
 
         public void OnExposedToScriptCode(IScriptEngine engine)
