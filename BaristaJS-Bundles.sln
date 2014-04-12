@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2FA8C5
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaristaJS.AppEngine.Bundles.Lodash", "BaristaJS.AppEngine.Bundles.Lodash\BaristaJS.AppEngine.Bundles.Lodash.csproj", "{B3264A00-F7F7-4C58-B733-5E330F7B0E71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaristaJS.AppEngine.Bundles.Npm", "BaristaJS.AppEngine.Bundles.Npm\BaristaJS.AppEngine.Bundles.Npm.csproj", "{E2A0C6BE-A5C4-45A7-AC29-D5577A014D9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +26,14 @@ Global
 		{65CC3F87-35D0-4EDC-A0CD-53913A84AC40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65CC3F87-35D0-4EDC-A0CD-53913A84AC40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65CC3F87-35D0-4EDC-A0CD-53913A84AC40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3264A00-F7F7-4C58-B733-5E330F7B0E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3264A00-F7F7-4C58-B733-5E330F7B0E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3264A00-F7F7-4C58-B733-5E330F7B0E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3264A00-F7F7-4C58-B733-5E330F7B0E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A0C6BE-A5C4-45A7-AC29-D5577A014D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A0C6BE-A5C4-45A7-AC29-D5577A014D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A0C6BE-A5C4-45A7-AC29-D5577A014D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A0C6BE-A5C4-45A7-AC29-D5577A014D9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
