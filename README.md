@@ -1,7 +1,7 @@
-BaristaJS-Bundles
+BaristaJS.AppEngine.Bundles.Core
 =================
 
-Contains BaristaJS Bundles.
+Contains BaristaJS Core Bundle
 
 BaristaJS Bundles are individual units of functionality. These bundles may be wrappers of existing functionality, a large library or a simple program.
 
