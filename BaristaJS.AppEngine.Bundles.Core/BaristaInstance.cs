@@ -61,6 +61,7 @@
             return bundle;
         }
 
+        [NoScriptAccess]
         public void OnExposedToScriptCode(IScriptEngine engine)
         {
             if (engine == null)
