@@ -90,7 +90,7 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <Target Name="AfterBuild">
-    <Exec ContinueOnError="false" WorkingDirectory="$(OutDir)" Command="&quot;$(SolutionDir).nuget\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -NonInteractive -IncludeReferencedProjects -Verbosity detailed -NoDefaultExcludes -Properties Configuration=&quot;$(Configuration)&quot;;Platform=&quot;$(Platform)&quot;" />
+    <Exec ContinueOnError="false" WorkingDirectory="$(OutDir)" Command="&quot;$(SolutionDir).nuget\nuget.exe&quot; pack &quot;$(ProjectDir)\BaristaJS.AppEngine.Bundles.Npm.nuspec&quot; -NonInteractive -includereferencedprojects -Verbosity detailed -NoDefaultExcludes -Properties Configuration=&quot;$(Configuration)&quot;;Platform=&quot;$(Platform)&quot;;OutDir=&quot;$(TargetDir)\&quot;" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

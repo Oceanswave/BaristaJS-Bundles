@@ -7,10 +7,12 @@
     <owners>BaristaJS</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Provides access to Npm modules.</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>$outdir$</releaseNotes>
     <copyright>Copyright 2014 SixConcepts, LLC</copyright>
   </metadata>
   <files>
+    <file src="$OutDir$BaristaJS.AppEngine.Bundles.Npm.dll" target="lib\net45" />
+    <file src="$OutDir$Newtonsoft.Json.dll" target="lib\net45" />
     <file src="node.exe" target="content\node" />
   </files>
 </package>
