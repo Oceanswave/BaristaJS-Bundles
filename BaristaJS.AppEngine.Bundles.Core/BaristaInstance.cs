@@ -25,19 +25,19 @@
         }
 
         #region Properties
-        public IBundleManager BundleManager
+        protected IBundleManager BundleManager
         {
             get;
             private set;
         }
 
-        public IDictionary<string, object> Environment
+        protected IDictionary<string, object> Environment
         {
             get;
             private set;
         }
 
-        public string PackageSource
+        protected string PackageSource
         {
             get;
             set;
