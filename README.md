@@ -12,5 +12,5 @@ In BaristaJS, include a bundle by specifying require("--BundleName--")
 
 |Bundle|Status|
 |------|------|
-|Core|<img src="https://www.myget.org/BuildSource/Badge/baristajs?identifier=774b51d9-8f0a-45f5-abe8-6e87d9acefa2" alt="MyGet Status"/>|
-|Lodash|<img src="https://www.myget.org/BuildSource/Badge/baristajs?identifier=6e9afa85-8657-48c9-baa8-807336a04c8e" alt="MyGet Status"/>|
+|Core|<img src="https://www.myget.org/BuildSource/Badge/baristajs?identifier=f87dfe90-fe09-40da-bf71-29d901870e3c" alt="MyGet Status"/>|
+|Lodash|<img src="https://www.myget.org/BuildSource/Badge/baristajs?identifier=24f5e561-c440-4175-9965-a953e9c6c8de" alt="MyGet Status"/>|
