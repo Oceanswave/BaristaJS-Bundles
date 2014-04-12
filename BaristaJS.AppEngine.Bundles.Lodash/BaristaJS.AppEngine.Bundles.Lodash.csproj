@@ -32,8 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BaristaJS.AppEngine.Core">
-      <HintPath>..\packages\BaristaJS.AppEngine.Core.1.0.0.4\lib\net45\BaristaJS.AppEngine.Core.dll</HintPath>
+    <Reference Include="BaristaJS.AppEngine.Core, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\BaristaJS.AppEngine.Core.1.0.0.5\lib\net45\BaristaJS.AppEngine.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,7 +52,6 @@
     <None Include="BaristaJS.AppEngine.Bundles.Lodash.nuspec">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -60,6 +60,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\lodash.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

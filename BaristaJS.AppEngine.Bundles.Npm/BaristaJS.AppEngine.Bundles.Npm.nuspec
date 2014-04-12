@@ -1,0 +1,16 @@
+<package>
+  <metadata>
+    <id>Npm</id>
+    <version>0.0.0.1</version>
+    <title>BaristaJS AppEngine Bundle - Npm</title>
+    <authors>BaristaJS</authors>
+    <owners>BaristaJS</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides access to Npm modules.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014 SixConcepts, LLC</copyright>
+  </metadata>
+  <files>
+    <file src="node.exe" target="content\node" />
+  </files>
+</package>

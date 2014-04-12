@@ -19,7 +19,8 @@
 
         public object InstallBundle(IScriptEngine engine)
         {
-            engine.AddHostObject("barista", m_instance);
+            engine.AddRestrictedHostObject("barista", m_instance);
+            engine.Evaluate("var require = barista.require");
             return Undefined.Value;
         }
     }

@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,14 +26,19 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BaristaJS.AppEngine.Core">
-      <HintPath>..\packages\BaristaJS.AppEngine.Core.1.0.0.4\lib\net45\BaristaJS.AppEngine.Core.dll</HintPath>
+    <Reference Include="BaristaJS.AppEngine.Core, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\BaristaJS.AppEngine.Core.1.0.0.5\lib\net45\BaristaJS.AppEngine.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,10 +49,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Imports\NodeNpm\interfaces\INpmApi.cs" />
+    <Compile Include="Imports\NodeNpm\interfaces\INpmClient.cs" />
+    <Compile Include="Imports\NodeNpm\interfaces\INpmPackage.cs" />
+    <Compile Include="Imports\NodeNpm\interfaces\INpmPackageManager.cs" />
+    <Compile Include="Imports\NodeNpm\interfaces\INpmSerialize.cs" />
+    <Compile Include="Imports\NodeNpm\NpmApi.cs" />
+    <Compile Include="Imports\NodeNpm\NpmClient.cs" />
+    <Compile Include="Imports\NodeNpm\NpmException.cs" />
+    <Compile Include="Imports\NodeNpm\NpmInstalledPackage.cs" />
+    <Compile Include="Imports\NodeNpm\NpmPackage.cs" />
+    <Compile Include="Imports\NodeNpm\NpmPackageDependency.cs" />
+    <Compile Include="Imports\NodeNpm\NpmPackageManager.cs" />
+    <Compile Include="Imports\NodeNpm\NpmReference.cs" />
+    <Compile Include="Imports\NodeNpm\NpmRemotePackage.cs" />
+    <Compile Include="Imports\NodeNpm\NpmSearchResultPackage.cs" />
+    <Compile Include="Imports\NodeNpm\utils\NpmFactory.cs" />
+    <Compile Include="Imports\NodeNpm\utils\NpmSerialize.cs" />
+    <Compile Include="Imports\NodeNpm\utils\NpmSerialize_v2.cs" />
+    <Compile Include="Imports\NodeNpm\utils\NpmSync.cs" />
+    <Compile Include="NpmBundle.cs" />
+    <Compile Include="NpmInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="BaristaJS.AppEngine.Bundles.Npm.nuspec" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="node.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
@@ -56,6 +88,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Target Name="AfterBuild">
+    <Exec ContinueOnError="false" WorkingDirectory="$(OutDir)" Command="&quot;$(SolutionDir).nuget\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -NonInteractive -IncludeReferencedProjects -Verbosity detailed -NoDefaultExcludes -Properties Configuration=&quot;$(Configuration)&quot;;Platform=&quot;$(Platform)&quot;" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
