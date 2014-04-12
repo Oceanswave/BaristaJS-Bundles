@@ -25,19 +25,22 @@
         }
 
         #region Properties
-        protected IBundleManager BundleManager
+        [NoScriptAccess]
+        public IBundleManager BundleManager
         {
             get;
             private set;
         }
 
-        protected IDictionary<string, object> Environment
+        [NoScriptAccess]
+        public IDictionary<string, object> Environment
         {
             get;
             private set;
         }
 
-        protected string PackageSource
+        [NoScriptAccess]
+        public string PackageSource
         {
             get;
             set;
