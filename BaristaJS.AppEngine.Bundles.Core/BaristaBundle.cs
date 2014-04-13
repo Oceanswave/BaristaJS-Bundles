@@ -8,7 +8,7 @@
 
         public BaristaBundle(IBundleManager bundleManager, string packageSource, IDictionary<string, object> env)
         {
-            m_instance = new BaristaInstance(bundleManager, packageSource, env, this.Metadata);
+            m_instance = new BaristaInstance(bundleManager, packageSource, env);
         }
 
         public IBundleMetadata Metadata
@@ -19,6 +19,7 @@
 
         public object InstallBundle(IScriptEngine engine)
         {
+            m_instance.Metadata = this.Metadata;
             engine.AddRestrictedHostObject("barista", m_instance);
             engine.Evaluate("var require = barista.require");
             return Undefined.Value;
