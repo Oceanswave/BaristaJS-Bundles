@@ -8,7 +8,7 @@
 
         public BaristaBundle(IBundleManager bundleManager, string packageSource, IDictionary<string, object> env)
         {
-            m_instance = new BaristaInstance(bundleManager, packageSource, env);
+            m_instance = new BaristaInstance(bundleManager, packageSource, env, this.Metadata);
         }
 
         public IBundleMetadata Metadata
