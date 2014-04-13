@@ -55,6 +55,7 @@
         public string Version
         {
             get { return m_baristaInstanceMetadata.Version.ToString(); }
+            set { /*Do nothing*/ }
         }
         #endregion
 
