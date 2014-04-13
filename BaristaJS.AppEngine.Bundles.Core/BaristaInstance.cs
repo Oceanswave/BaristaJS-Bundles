@@ -27,6 +27,7 @@
             PackageSource = packageSource;
             Environment = env;
             m_baristaInstanceMetadata = metadata;
+            HappyPuppy = metadata.Version.ToString();
         }
 
         #region Properties
@@ -46,6 +47,13 @@
 
         [NoScriptAccess]
         public string PackageSource
+        {
+            get;
+            set;
+        }
+        
+        [ScriptMember(Name = "happyPuppy")]
+        public string HappyPuppy
         {
             get;
             set;
