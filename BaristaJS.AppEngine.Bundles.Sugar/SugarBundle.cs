@@ -1,6 +1,6 @@
 ﻿namespace BaristaJS.AppEngine.Bundles.Sugar
 {
-    public class SugarBundle
+    public class SugarBundle : IBundle
     {
         public IBundleMetadata Metadata
         {
