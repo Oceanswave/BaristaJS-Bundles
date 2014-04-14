@@ -1,0 +1,13 @@
+<package>
+  <metadata>
+    <id>Sugar</id>
+    <version>1.3.9.0</version>
+    <title>BaristaJS AppEngine Bundle - Sugar</title>
+    <authors>BaristaJS</authors>
+    <owners>BaristaJS</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Sugar is a Javascript library that extends native objects with helpful methods.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014 SixConcepts, LLC</copyright>
+  </metadata>
+</package>
