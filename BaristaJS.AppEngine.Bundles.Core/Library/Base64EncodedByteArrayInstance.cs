@@ -20,12 +20,14 @@
     }
 
     public Base64EncodedByteArrayInstance(byte[] data)
+      : this()
     {
       if (data != null && data.Length > 0)
         this.m_data = new List<byte>(data);
     }
 
     public Base64EncodedByteArrayInstance(string data)
+      : this()
     {
       if (String.IsNullOrWhiteSpace(data) == false && data.Length > 0)
         this.m_data = new List<byte>(data.ToByteArray());

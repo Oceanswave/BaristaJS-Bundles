@@ -8,6 +8,12 @@
   {
     public static void SetHeaderIfNotExist(IDictionary<string, object> env, string headerKey, params string[] values)
     {
+      if (values == null || values.Length == 0)
+        return;
+
+      if (values.Length == 1 && String.IsNullOrWhiteSpace(values[0]))
+        return;
+
       var headers = (IDictionary<string, string[]>)env["owin.ResponseHeaders"];
 
       var existingValue =

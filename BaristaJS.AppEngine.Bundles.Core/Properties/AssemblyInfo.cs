@@ -9,6 +9,6 @@ using BaristaJS.AppEngine.Bundles;
 [assembly: AssemblyCopyright("(c) SixConcepts LLC")]
 
 [assembly: ComVisible(false)]
-[assembly: AssemblyVersion("0.0.0.10")]
-[assembly: AssemblyFileVersion("0.0.0.10")]
+[assembly: AssemblyVersion("0.0.0.11")]
+[assembly: AssemblyFileVersion("0.0.0.11")]
 [assembly: BaristaJSBundle(typeof(BaristaBundle))]
