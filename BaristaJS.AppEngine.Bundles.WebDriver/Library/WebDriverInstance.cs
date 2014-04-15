@@ -5,11 +5,26 @@
   using System.Collections.ObjectModel;
   using BaristaJS.AppEngine.Bundles.WebDriver.Library;
   using OpenQA.Selenium;
+  using OpenQA.Selenium.PhantomJS;
 
   public class WebDriverInstance<T> : IWebDriver
     where T : class, IWebDriver, new()
   {
     private readonly T m_webDriver;
+
+    public WebDriverInstance()
+    {
+
+      if (typeof (T) == typeof(PhantomJSDriver))
+      {
+        var newDriver = new PhantomJSDriver(WebDriverBundle.PhantomJSDriverService);
+        m_webDriver = newDriver as T;
+      }
+      else
+      {
+        m_webDriver = new T();
+      }
+    }
 
     public WebDriverInstance(T webDriver)
     {
@@ -69,6 +84,7 @@
       return new OptionsInstance(m_webDriver.Manage());
     }
 
+    [ScriptMember(Name = "navigate")]
     public INavigation Navigate()
     {
       return new NavigationInstance(m_webDriver.Navigate());

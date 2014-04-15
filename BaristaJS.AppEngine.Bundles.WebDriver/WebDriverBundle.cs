@@ -23,15 +23,30 @@
     {
       //TODO: Add all the necessary types.
       //engine.AddHostObject("CookieJar", new CookieJarWrapper());
-      engine.AddHostType("By", typeof(ByInstance));
-      engine.AddHostType("Cookie", typeof (CookieInstance));
-      engine.AddHostType("Screenshot", typeof(ScreenshotInstance));
+      engine.AddHostType("WebDriver.By", typeof(ByInstance));
+      engine.AddHostType("WebDriver.Cookie", typeof (CookieInstance));
+      engine.AddHostType("WebDriver.CookieJar", typeof(CookieJarInstance));
+      engine.AddHostType("WebDriver.Navigation", typeof(NavigationInstance));
+      engine.AddHostType("WebDriver.Options", typeof(OptionsInstance));
+      engine.AddHostType("WebDriver.Screenshot", typeof(ScreenshotInstance));
+      engine.AddHostType("WebDriver.SearchContext", typeof(SearchContextInstance));
+      engine.AddHostType("WebDriver.TakesScreenshot", typeof(TakesScreenshotInstance));
+      engine.AddHostType("WebDriver.TargetLocator", typeof(TargetLocatorInstance));
+      engine.AddHostType("WebDriver.Timeouts", typeof(TimeoutsInstance));
+      engine.AddHostType("WebDriver.WebElement", typeof(WebElementInstance));
+      engine.AddHostType("WebDriver.Window", typeof(WindowInstance));
+      engine.AddHostType("WebDriver.PhantomJSDriver", typeof(WebDriverInstance<PhantomJSDriver>));
 
-      var service = PhantomJSDriverService.CreateDefaultService(m_bundleInstallPath, PhantomJSExecutableFileName);
-      var phantomJS = new PhantomJSDriver(service);
+      WebDriverBundle.PhantomJSDriverService = PhantomJSDriverService.CreateDefaultService(m_bundleInstallPath, PhantomJSExecutableFileName);
 
-      engine.AddHostObject("phantomJSDriver", new WebDriverInstance<PhantomJSDriver>(phantomJS));
+      engine.AddHostObject("phantomJSDriver", new WebDriverInstance<PhantomJSDriver>(new PhantomJSDriver(WebDriverBundle.PhantomJSDriverService)));
       return Undefined.Value;
+    }
+
+    public static PhantomJSDriverService PhantomJSDriverService
+    {
+      get;
+      set;
     }
   }
 }
