@@ -23,6 +23,7 @@
     {
       //TODO: Add all the necessary types.
       //engine.AddHostObject("CookieJar", new CookieJarWrapper());
+      engine.Execute("var WebDriver = {};");
       engine.AddHostType("WebDriver.By", typeof(ByInstance));
       engine.AddHostType("WebDriver.Cookie", typeof (CookieInstance));
       engine.AddHostType("WebDriver.CookieJar", typeof(CookieJarInstance));

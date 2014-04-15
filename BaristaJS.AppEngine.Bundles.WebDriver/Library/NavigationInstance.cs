@@ -27,10 +27,10 @@
       m_navigation.Forward();
     }
 
-    public void GoToUrl(Uri url)
-    {
-      m_navigation.GoToUrl(url);
-    }
+    //public void GoToUrl(Uri url)
+    //{
+    //  m_navigation.GoToUrl(url);
+    //}
 
     [ScriptMember(Name = "goToUrl")]
     public void GoToUrl(string url)

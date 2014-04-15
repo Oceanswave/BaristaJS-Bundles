@@ -1,6 +1,5 @@
 ﻿namespace BaristaJS.AppEngine.Bundles.Library
 {
-  using System.Globalization;
   using System.IO;
   using System.Threading.Tasks;
   using BaristaJS.AppEngine.Extensions;
@@ -123,7 +122,7 @@
     {
       OwinHelpers.SetHeaderIfNotExist(env, "Content-Disposition", "attachment; filename=\"" + FileName + "\"");
       OwinHelpers.SetHeaderIfNotExist(env, "Content-Type", MimeType);
-      OwinHelpers.SetHeaderIfNotExist(env, "Content-Length", Length.ToString(CultureInfo.InvariantCulture));
+      //OwinHelpers.SetHeaderIfNotExist(env, "Content-Length", Length.ToString(CultureInfo.InvariantCulture));
       
       using (var writer = new StreamWriter((Stream)env["owin.ResponseBody"], Encoding.UTF8))
       {

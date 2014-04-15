@@ -36,7 +36,7 @@
     public async Task Invoke(IDictionary<string, object> env)
     {
       OwinHelpers.SetHeaderIfNotExist(env, "Content-Type", "image/png");
-      OwinHelpers.SetHeaderIfNotExist(env, "Content-Length", m_screenshot.AsByteArray.Length.ToString(CultureInfo.InvariantCulture));
+      //OwinHelpers.SetHeaderIfNotExist(env, "Content-Length", m_screenshot.AsByteArray.Length.ToString(CultureInfo.InvariantCulture));
 
       using (var writer = new StreamWriter((Stream)env["owin.ResponseBody"], Encoding.UTF8))
       {
