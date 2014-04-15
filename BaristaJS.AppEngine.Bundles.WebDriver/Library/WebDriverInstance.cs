@@ -3,10 +3,11 @@
   using System;
   using System.Collections.Generic;
   using System.Collections.ObjectModel;
+  using BaristaJS.AppEngine.Bundles.WebDriver.Library;
   using OpenQA.Selenium;
 
   public class WebDriverInstance<T> : IWebDriver
-    where T : class, IWebDriver
+    where T : class, IWebDriver, new()
   {
     private readonly T m_webDriver;
 
@@ -97,6 +98,16 @@
       var result = new List<IWebElement>();
       result.AddRange(m_webDriver.FindElements(by));
       return result.AsReadOnly();
+    }
+
+    [ScriptMember(Name = "getScreenshot")]
+    public ScreenshotInstance GetScreenshot()
+    {
+      var takesScreenshot = m_webDriver as ITakesScreenshot;
+      if (takesScreenshot == null)
+        return null;
+
+      return new ScreenshotInstance(takesScreenshot.GetScreenshot());
     }
 
     public void Dispose()

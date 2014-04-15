@@ -54,7 +54,9 @@
     <Compile Include="Library\CookieInstance.cs" />
     <Compile Include="Library\NavigationInstance.cs" />
     <Compile Include="Library\OptionsInstance.cs" />
+    <Compile Include="Library\ScreenshotInstance.cs" />
     <Compile Include="Library\SearchContextInstance.cs" />
+    <Compile Include="Library\TakesScreenshotInstance.cs" />
     <Compile Include="Library\TargetLocatorInstance.cs" />
     <Compile Include="Library\TimeoutsInstance.cs" />
     <Compile Include="Library\WebDriverInstance.cs" />

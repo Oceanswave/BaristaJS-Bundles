@@ -129,16 +129,32 @@
     }
 
     [ScriptMember("installedBundles")]
-    public IList<IBundle> InstalledBundles
+    public IPropertyBag InstalledBundles
     {
-      get { return BundleManager.InstalledBundles; }
+      get
+      {
+        var result = new PropertyBag();
+        foreach (var bundle in BundleManager.InstalledBundles)
+        {
+          result.Add(bundle.Metadata.Id, bundle.Metadata);
+        }
+
+        return result;
+      }
     }
 
     [ScriptMember("require")]
     public object Require(string packageId, string version = null)
     {
-      var bundle = BundleManager.GetBundle<IBundle>(Environment, PackageSource, packageId, version);
-      return bundle.InstallBundle(m_engine);
+      try
+      {
+        var bundle = BundleManager.GetBundle<IBundle>(Environment, PackageSource, packageId, version);
+        return bundle.InstallBundle(m_engine);
+      }
+      catch (Exception ex)
+      {
+        throw new ScriptEngineException("An error occurred while attempting to require a bundle.", ex);
+      }
     }
 
     [NoScriptAccess]
