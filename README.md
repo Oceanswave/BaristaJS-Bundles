@@ -10,4 +10,4 @@ The bundles contained in this repository are published through the BaristaJS NuG
 
 In BaristaJS, include a bundle by specifying require("--BundleName--")
 
-<img src="https://www.myget.org/BuildSource/Badge/baristajs?identifier=7f36e4cf-9ca3-4882-980c-6fe79ed63eeb" alt="MyGet Status"/>
+[![baristajs MyGet Build Status](https://www.myget.org/BuildSource/Badge/baristajs?identifier=7f36e4cf-9ca3-4882-980c-6fe79ed63eeb)](https://www.myget.org/)
