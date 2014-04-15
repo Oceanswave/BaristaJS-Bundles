@@ -1,0 +1,18 @@
+<package>
+  <metadata>
+    <id>WebDriver</id>
+    <version>2.41.0.0</version>
+    <title>BaristaJS AppEngine Bundle - WebDriver</title>
+    <authors>BaristaJS</authors>
+    <owners>BaristaJS</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Selenium is a set of different software tools each with a different approach to supporting browser automation.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014 SixConcepts, LLC</copyright>
+  </metadata>
+  <files>
+    <file src="$OutDir$BaristaJS.AppEngine.Bundles.WebDriver.dll" target="lib\net45" />
+    <file src="$OutDir$WebDriver.dll" target="lib\net45" />
+    <file src="$OutDir$phantomjs.exe" target="lib\net45" />
+  </files>
+</package>

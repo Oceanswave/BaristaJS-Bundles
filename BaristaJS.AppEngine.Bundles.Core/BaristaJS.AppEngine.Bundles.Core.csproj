@@ -48,11 +48,14 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="BaristaJS.AppEngine.Core, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="BaristaJS.AppEngine.Core, Version=1.0.0.10, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\BaristaJS.AppEngine.Core.1.0.0.6\lib\net45\BaristaJS.AppEngine.Core.dll</HintPath>
+      <HintPath>..\packages\BaristaJS.AppEngine.Core.1.0.0.10\lib\net45\BaristaJS.AppEngine.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Library\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
