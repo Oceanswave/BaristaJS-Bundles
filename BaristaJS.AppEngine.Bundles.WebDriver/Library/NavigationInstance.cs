@@ -27,11 +27,6 @@
       m_navigation.Forward();
     }
 
-    //public void GoToUrl(Uri url)
-    //{
-    //  m_navigation.GoToUrl(url);
-    //}
-
     [ScriptMember(Name = "goToUrl")]
     public void GoToUrl(string url)
     {
@@ -42,6 +37,11 @@
     public void Refresh()
     {
       m_navigation.Refresh();
+    }
+
+    void INavigation.GoToUrl(Uri url)
+    {
+      m_navigation.GoToUrl(url);
     }
   }
 }
