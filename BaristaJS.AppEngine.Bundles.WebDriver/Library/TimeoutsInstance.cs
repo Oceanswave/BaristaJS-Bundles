@@ -3,11 +3,11 @@
   using System;
   using OpenQA.Selenium;
 
-  public class TimeoutsWrapper : ITimeouts
+  public class TimeoutsInstance : ITimeouts
   {
     private readonly ITimeouts m_timeouts;
 
-    public TimeoutsWrapper(ITimeouts timeouts)
+    public TimeoutsInstance(ITimeouts timeouts)
     {
       if (timeouts == null)
         throw new ArgumentNullException("timeouts");
@@ -19,7 +19,7 @@
     public ITimeouts ImplicitlyWait(string timeToWait)
     {
       var ts = TimeSpan.Parse(timeToWait);
-      return new TimeoutsWrapper(m_timeouts.ImplicitlyWait(ts));
+      return new TimeoutsInstance(m_timeouts.ImplicitlyWait(ts));
     }
 
     ITimeouts ITimeouts.ImplicitlyWait(TimeSpan timeToWait)
@@ -31,7 +31,7 @@
     public ITimeouts SetPageLoadTimeout(string timeToWait)
     {
       var ts = TimeSpan.Parse(timeToWait);
-      return new TimeoutsWrapper(m_timeouts.SetPageLoadTimeout(ts));
+      return new TimeoutsInstance(m_timeouts.SetPageLoadTimeout(ts));
     }
 
     ITimeouts ITimeouts.SetPageLoadTimeout(TimeSpan timeToWait)
@@ -43,7 +43,7 @@
     public ITimeouts SetScriptTimeout(string timeToWait)
     {
       var ts = TimeSpan.Parse(timeToWait);
-      return new TimeoutsWrapper(m_timeouts.SetPageLoadTimeout(ts));
+      return new TimeoutsInstance(m_timeouts.SetPageLoadTimeout(ts));
     }
 
     public ITimeouts SetScriptTimeout(TimeSpan timeToWait)

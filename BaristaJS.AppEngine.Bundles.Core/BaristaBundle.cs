@@ -1,7 +1,9 @@
 ﻿namespace BaristaJS.AppEngine.Bundles
 {
     using System.Collections.Generic;
-    using BaristaJS.AppEngine.Library;
+    using BaristaJS.AppEngine.Bundles.Library;
+    using PointInstance = BaristaJS.AppEngine.Bundles.Library.PointInstance;
+    using SizeInstance = BaristaJS.AppEngine.Bundles.Library.SizeInstance;
 
   public class BaristaBundle : IBootstrapBundle
     {
@@ -23,7 +25,7 @@
             m_instance.Metadata = this.Metadata;
             engine.AddHostType("Size", typeof(SizeInstance));
             engine.AddHostType("Point", typeof(PointInstance));
-            engine.AddHostType("Base64ByteArray", typeof(Base64EncodedByteArrayInstance));
+            engine.AddHostType("Base64EncodedByteArray", typeof(Base64EncodedByteArrayInstance));
 
             engine.AddRestrictedHostObject("barista", m_instance);
             

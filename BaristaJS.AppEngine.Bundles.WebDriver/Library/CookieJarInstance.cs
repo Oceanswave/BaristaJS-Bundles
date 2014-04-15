@@ -5,11 +5,11 @@
   using System.Linq;
   using OpenQA.Selenium;
 
-  public class CookieJarWrapper : ICookieJar
+  public class CookieJarInstance : ICookieJar
   {
     private readonly ICookieJar m_cookieJar;
 
-    public CookieJarWrapper(ICookieJar cookieJar)
+    public CookieJarInstance(ICookieJar cookieJar)
     {
       if (cookieJar == null)
         throw new ArgumentNullException("cookieJar");

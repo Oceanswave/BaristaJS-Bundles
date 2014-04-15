@@ -3,11 +3,11 @@
   using System;
   using OpenQA.Selenium;
 
-  public class NavigationWrapper : INavigation
+  public class NavigationInstance : INavigation
   {
     private readonly INavigation m_navigation;
 
-    public NavigationWrapper(INavigation navigation)
+    public NavigationInstance(INavigation navigation)
     {
       if (navigation == null)
         throw new ArgumentNullException("navigation");

@@ -32,5 +32,19 @@
       }
     }
 
+    [ScriptMember(Name = "value")]
+    public string Value
+    {
+      get
+      {
+        return m_cookie.Value;
+      }
+    }
+
+    [ScriptMember(Name = "toString")]
+    public override string ToString()
+    {
+      return m_cookie.ToString();
+    }
   }
 }

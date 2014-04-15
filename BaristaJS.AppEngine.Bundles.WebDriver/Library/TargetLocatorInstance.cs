@@ -3,11 +3,11 @@
   using System;
   using OpenQA.Selenium;
 
-  public class TargetLocatorWrapper : ITargetLocator
+  public class TargetLocatorInstance : ITargetLocator
   {
     private readonly ITargetLocator m_targetLocator;
 
-    public TargetLocatorWrapper(ITargetLocator targetLocator)
+    public TargetLocatorInstance(ITargetLocator targetLocator)
     {
         if (targetLocator == null)
           throw new ArgumentNullException("targetLocator");

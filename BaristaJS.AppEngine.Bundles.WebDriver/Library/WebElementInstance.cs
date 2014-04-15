@@ -6,11 +6,11 @@
   using System.Drawing;
   using OpenQA.Selenium;
 
-  public class WebElementWrapper : IWebElement
+  public class WebElementInstance : IWebElement
   {
     private readonly IWebElement m_webElement;
 
-    public WebElementWrapper(IWebElement element)
+    public WebElementInstance(IWebElement element)
     {
       if (element == null)
         throw new ArgumentNullException("element");
@@ -99,7 +99,7 @@
     [ScriptMember(Name = "submit")]
     public IWebElement FindElement(By by)
     {
-      return new WebElementWrapper(m_webElement.FindElement(by));
+      return new WebElementInstance(m_webElement.FindElement(by));
     }
 
     [ScriptMember(Name = "findElements")]

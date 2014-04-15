@@ -5,12 +5,12 @@
   using System.Collections.ObjectModel;
   using OpenQA.Selenium;
 
-  public class WebDriverWrapper<T> : IWebDriver
+  public class WebDriverInstance<T> : IWebDriver
     where T : class, IWebDriver
   {
     private readonly T m_webDriver;
 
-    public WebDriverWrapper(T webDriver)
+    public WebDriverInstance(T webDriver)
     {
       if (webDriver == null)
         throw new ArgumentNullException("webDriver");
@@ -65,12 +65,12 @@
     [ScriptMember(Name = "manage")]
     public IOptions Manage()
     {
-      return new OptionsWrapper(m_webDriver.Manage());
+      return new OptionsInstance(m_webDriver.Manage());
     }
 
     public INavigation Navigate()
     {
-      return new NavigationWrapper(m_webDriver.Navigate());
+      return new NavigationInstance(m_webDriver.Navigate());
     }
 
     [ScriptMember(Name = "quit")]
@@ -82,13 +82,13 @@
     [ScriptMember(Name = "switchTo")]
     public ITargetLocator SwitchTo()
     {
-      return new TargetLocatorWrapper(m_webDriver.SwitchTo());
+      return new TargetLocatorInstance(m_webDriver.SwitchTo());
     }
 
     [ScriptMember(Name = "findElement")]
     public IWebElement FindElement(By by)
     {
-      return new WebElementWrapper(m_webDriver.FindElement(by));
+      return new WebElementInstance(m_webDriver.FindElement(by));
     }
 
     [ScriptMember(Name = "findElements")]

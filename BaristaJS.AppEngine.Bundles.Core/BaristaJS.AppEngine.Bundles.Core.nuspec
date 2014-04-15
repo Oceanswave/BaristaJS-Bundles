@@ -1,7 +1,7 @@
 <package>
   <metadata>
     <id>Core</id>
-    <version>0.0.0.9</version>
+    <version>0.0.0.10</version>
     <title>BaristaJS AppEngine Bundle - Core BaristaJS Bootstrapper</title>
     <authors>BaristaJS</authors>
     <owners>BaristaJS</owners>
