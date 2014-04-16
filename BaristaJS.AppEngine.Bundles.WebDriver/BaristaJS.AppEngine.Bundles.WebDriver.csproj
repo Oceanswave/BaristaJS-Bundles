@@ -52,6 +52,8 @@
     <Compile Include="Library\ByInstance.cs" />
     <Compile Include="Library\CookieJarInstance.cs" />
     <Compile Include="Library\CookieInstance.cs" />
+    <Compile Include="Library\KeyboardInstance.cs" />
+    <Compile Include="Library\MouseInstance.cs" />
     <Compile Include="Library\NavigationInstance.cs" />
     <Compile Include="Library\OptionsInstance.cs" />
     <Compile Include="Library\ScreenshotInstance.cs" />

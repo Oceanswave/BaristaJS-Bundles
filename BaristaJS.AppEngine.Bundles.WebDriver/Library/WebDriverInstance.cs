@@ -35,6 +35,7 @@
     }
 
     #region Properties
+    [NoScriptAccess]
     public T WebDriver 
     {
       get { return m_webDriver; }
@@ -78,10 +79,32 @@
       m_webDriver.Close();
     }
 
+    [ScriptMember(Name = "keyboard")]
+    public object Keyboard()
+    {
+      var inputDevices = m_webDriver as OpenQA.Selenium.IHasInputDevices;
+        
+      if (inputDevices == null)
+        return Undefined.Value;
+
+      return new KeyboardInstance(inputDevices.Keyboard);
+    }
+
     [ScriptMember(Name = "manage")]
     public IOptions Manage()
     {
       return new OptionsInstance(m_webDriver.Manage());
+    }
+
+    [ScriptMember(Name = "mouse")]
+    public object Mouse()
+    {
+      var inputDevices = m_webDriver as OpenQA.Selenium.IHasInputDevices;
+
+      if (inputDevices == null)
+        return Undefined.Value;
+
+      return new MouseInstance(inputDevices.Mouse);
     }
 
     [ScriptMember(Name = "navigate")]
@@ -124,6 +147,15 @@
         return null;
 
       return new ScreenshotInstance(takesScreenshot.GetScreenshot());
+    }
+
+    [ScriptMember(Name = "executeScript")]
+    public object ExecuteScript(string script, params object[] args)
+    {
+      var executor = m_webDriver as OpenQA.Selenium.IJavaScriptExecutor;
+      return executor != null
+        ? executor.ExecuteScript(script, args)
+        : Undefined.Value;
     }
 
     public void Dispose()

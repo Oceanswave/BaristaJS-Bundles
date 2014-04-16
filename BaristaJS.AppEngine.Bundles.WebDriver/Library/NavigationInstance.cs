@@ -39,6 +39,7 @@
       m_navigation.Refresh();
     }
 
+    [ScriptMember(Name = "goToUrl")]
     void INavigation.GoToUrl(Uri url)
     {
       m_navigation.GoToUrl(url);
