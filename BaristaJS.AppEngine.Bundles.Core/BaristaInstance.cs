@@ -26,6 +26,12 @@
 
     #region Properties
 
+    public IScriptEngine ScriptEngine
+    {
+        get { return m_engine; }
+        internal set { m_engine = value; }
+    }
+
     [NoScriptAccess]
     public IBundleMetadata Metadata
     {
@@ -49,13 +55,6 @@
 
     [NoScriptAccess]
     public string PackageSource
-    {
-      get;
-      set;
-    }
-
-    [ScriptMember(Name = "happyPuppy")]
-    public string HappyPuppy
     {
       get;
       set;

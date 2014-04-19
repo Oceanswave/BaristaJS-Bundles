@@ -22,14 +22,16 @@
 
         public object InstallBundle(IScriptEngine engine)
         {
-            m_instance.Metadata = this.Metadata;
+            m_instance.Metadata = Metadata;
+            m_instance.ScriptEngine = engine;
+
             engine.AddHostType("Size", typeof(SizeInstance));
             engine.AddHostType("Point", typeof(PointInstance));
             engine.AddHostType("Base64EncodedByteArray", typeof(Base64EncodedByteArrayInstance));
 
             engine.AddRestrictedHostObject("barista", m_instance);
             
-            engine.Evaluate("var require = barista.require");
+            engine.Evaluate("var require = barista.require;");
 
             return Undefined.Value;
         }
