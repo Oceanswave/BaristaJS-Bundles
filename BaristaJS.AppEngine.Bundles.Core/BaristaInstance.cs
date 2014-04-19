@@ -153,7 +153,7 @@
       }
       catch (Exception ex)
       {
-        throw new ScriptEngineException("An error occurred while attempting to require a bundle.", ex);
+        throw new ScriptEngineException("An error occurred while attempting to require a bundle: " + ex.Message, ex);
       }
     }
 
