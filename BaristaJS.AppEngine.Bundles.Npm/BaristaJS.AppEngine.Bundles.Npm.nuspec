@@ -1,7 +1,7 @@
 <package>
   <metadata>
     <id>Npm</id>
-    <version>0.0.0.3</version>
+    <version>0.0.0.4</version>
     <title>BaristaJS AppEngine Bundle - Npm</title>
     <authors>BaristaJS</authors>
     <owners>BaristaJS</owners>
@@ -11,7 +11,7 @@
     <copyright>Copyright 2014 SixConcepts, LLC</copyright>
   </metadata>
   <files>
-    <file src="$OutDir$BaristaJS.AppEngine.Bundles.Npm.dll" target="lib\net45" />
+    <file src="$OutDir$Octokit.dll" target="lib\net45" />
     <file src="$OutDir$Newtonsoft.Json.dll" target="lib\net45" />
   </files>
 </package>
