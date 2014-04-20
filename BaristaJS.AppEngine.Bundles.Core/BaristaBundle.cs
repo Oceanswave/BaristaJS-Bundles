@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using BaristaJS.AppEngine.Bundles.Library;
+    using BaristaJS.AppEngine.FileSystems;
     using PointInstance = BaristaJS.AppEngine.Bundles.Library.PointInstance;
     using SizeInstance = BaristaJS.AppEngine.Bundles.Library.SizeInstance;
 
@@ -9,9 +10,9 @@
     {
         private readonly BaristaInstance m_instance;
 
-        public BaristaBundle(IBundleManager bundleManager, string packageSource, IDictionary<string, object> env)
+        public BaristaBundle(IBundleManager bundleManager, string packageSource, IDictionary<string, object> env, IFileSystem fileSystem)
         {
-            m_instance = new BaristaInstance(bundleManager, packageSource, env);
+            m_instance = new BaristaInstance(bundleManager, packageSource, env, fileSystem);
         }
 
         public IBundleMetadata Metadata
