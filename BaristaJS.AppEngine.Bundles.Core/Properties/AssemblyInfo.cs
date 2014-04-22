@@ -11,4 +11,4 @@ using BaristaJS.AppEngine.Bundles;
 [assembly: ComVisible(false)]
 [assembly: AssemblyVersion("0.0.0.16")]
 [assembly: AssemblyFileVersion("0.0.0.16")]
-[assembly: BaristaJSBundle(typeof(BaristaBundle))]
+[assembly: BaristaJSBundle(typeof(BaristaBootstrapBundle))]

@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BaristaBundle.cs" />
+    <Compile Include="BaristaBootstrapBundle.cs" />
     <Compile Include="BaristaInstance.cs">
       <SubType>Code</SubType>
     </Compile>

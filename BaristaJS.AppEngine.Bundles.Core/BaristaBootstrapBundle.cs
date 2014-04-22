@@ -6,11 +6,11 @@
     using PointInstance = BaristaJS.AppEngine.Bundles.Library.PointInstance;
     using SizeInstance = BaristaJS.AppEngine.Bundles.Library.SizeInstance;
 
-  public class BaristaBundle : IBootstrapBundle
+  public class BaristaBootstrapBundle : IBootstrapBundle
     {
         private readonly BaristaInstance m_instance;
 
-        public BaristaBundle(IBundleManager bundleManager, string packageSource, IDictionary<string, object> env, IFileSystem fileSystem)
+        public BaristaBootstrapBundle(IBundleManager bundleManager, string packageSource, IDictionary<string, object> env, IFileSystem fileSystem)
         {
             m_instance = new BaristaInstance(bundleManager, packageSource, env, fileSystem);
         }
